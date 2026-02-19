@@ -9,20 +9,22 @@
       routerLinkActive="active-link"
       [routerLinkActiveOptions]="{exact: true}">Find bolig</a>
 
-    <a routerLink="/min-bolig"
-      routerLinkActive="active-link">Min bolig afdeling</a>
-
     <a routerLink="/kontakt"
-      routerLinkActive="active-link">Kontakt</a>
+      routerLinkActive="active-link">Nyheder</a>
 
     <a routerLink="/viden"
       routerLinkActive="active-link">Værd at vide</a>
+
+    <a routerLink="/min-bolig"
+      routerLinkActive="active-link">Min bolig afdeling</a>
+
     <a routerLink="/about"
-      routerLinkActive="active-link">Om fsb</a>
+      routerLinkActive="active-link">Kontakt</a>
+
   </div>
 
   <div class="nav-actions">
-    <div class="search-container">
+    <div class="search-container desktop-search">
       <input type="text" placeholder="Søg..." class="search-input">
     </div>
 
@@ -48,7 +50,7 @@
     </div>
 
     <a routerLink="/about" (click)="toggleMenu()">Om fsb</a>
-    <a href="#" (click)="toggleMenu()">Nyheder</a>
+    <a href="#" (click)="toggleMenu()">Boligsøgende</a>
     <a href="#" (click)="toggleMenu()">Ledige stillinger</a>
 
   </div>
