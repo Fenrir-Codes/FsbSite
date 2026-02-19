@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --fsb-blue: #002b5c;
+  --fsb-red: #e20613;
+  --fsb-light: #f8fafc;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--fsb-light);
+  color: #334155;
+}
+
+* {
+  box-sizing: border-box;
+}

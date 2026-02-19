@@ -1,0 +1,156 @@
+.home-wrapper {
+  padding: 15px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/*greenish color :  */
+
+/* Hős-szekció alap (Mobil) */
+.hero-section {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Mobilon egymás alá kerül a kép és a kártya */
+}
+
+.hero-image {
+  width: 100%;
+  height: 250px;
+  /* Mobilon fix magasság a képnek */
+  background-image: url('/HeroImage.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.info-card {
+  background-color: rgba(0, 43, 92, 0.95);
+  /* Mobilon nem kell áttetszőség, ha külön blokk */
+  padding: 30px 20px;
+  color: white;
+  width: 100%;
+  /* Mobilon teljes szélesség */
+  box-sizing: border-box;
+}
+
+.icon-circle {
+  background-color: #e20613;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.info-card h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.button-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Gombok közös stílusa */
+.btn-red,
+.btn-dark,
+.btn-outline {
+  padding: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn-red {
+  background-color: #e20613;
+  color: white;
+  border: none;
+}
+
+.btn-dark {
+  background-color: #001f44;
+  color: white;
+  border: none;
+}
+
+.btn-outline {
+  background: none;
+  color: white;
+  border: 1px solid white;
+}
+
+/* Hírek (Mobil) */
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Mobilon 1 oszlop */
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.news-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- TABLET ÉS DESKTOP (768px felett) --- */
+@media (min-width: 768px) {
+  .home-wrapper {
+    margin-top: 80px;
+    padding: 40px;
+  }
+
+  .hero-section {
+    height: 500px;
+    position: relative;
+    display: block;
+  }
+
+  .hero-image {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .info-card {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 43, 92, 0.95);
+    width: 350px;
+    border-radius: 15px;
+    padding: 40px;
+  }
+
+  .info-card h1 {
+    font-size: 24px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr 1fr;
+    /* Tableten 2 oszlop */
+  }
+}
+
+/* --- NAGY DESKTOP (1200px felett) --- */
+@media (min-width: 1200px) {
+  .news-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 oszlop a híreknek */
+  }
+}

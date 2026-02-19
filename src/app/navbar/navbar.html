@@ -1,0 +1,56 @@
+<nav class="navbar">
+  <div class="logo-container">
+    <a routerLink="/"><img src="fsblogo.png" alt="fsb logo"
+        class="navbar-logo"></a>
+  </div>
+
+  <div class="nav-links">
+    <a routerLink="/"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{exact: true}">Find bolig</a>
+
+    <a routerLink="/min-bolig"
+      routerLinkActive="active-link">Min bolig afdeling</a>
+
+    <a routerLink="/kontakt"
+      routerLinkActive="active-link">Kontakt</a>
+
+    <a routerLink="/viden"
+      routerLinkActive="active-link">Værd at vide</a>
+    <a routerLink="/about"
+      routerLinkActive="active-link">Om fsb</a>
+  </div>
+
+  <div class="nav-actions">
+    <div class="search-container">
+      <input type="text" placeholder="Søg..." class="search-input">
+    </div>
+
+    <button class="min-side-btn desktop-only-btn">Min side</button>
+    <button class="min-side-btn desktop-menu-btn"
+      (click)="toggleMenu()">Menu</button>
+
+    <button class="hamburger-menu" (click)="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+@if (isMenuOpen) {
+<div class="menu-overlay" (click)="toggleMenu()"></div>
+<div class="side-menu">
+  <button class="close-btn" (click)="toggleMenu()">✕</button>
+
+  <div class="side-menu-content">
+    <div class="side-menu-header-links">
+      <a routerLink="/" (click)="toggleMenu()">Find bolig</a>
+      <a href="#" (click)="toggleMenu()">Min bolig afdeling</a>
+      <a href="#" (click)="toggleMenu()">Kontakt</a>
+      <a href="#" (click)="toggleMenu()">Værd at vide</a>
+    </div>
+
+    <a routerLink="/about" (click)="toggleMenu()">Om fsb</a>
+    <a href="#" (click)="toggleMenu()">Nyheder</a>
+    <a href="#" (click)="toggleMenu()">Ledige stillinger</a>
+
+  </div>
+</div>
+}

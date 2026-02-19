@@ -1,0 +1,36 @@
+/* Alapbeállítások, hogy ne legyen felesleges hézag */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /* Megállítja a teljes ablak görgetését */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  /* Mobilon 70px, asztalin 80px helyet hagyunk fent a navbar miatt */
+  padding-top: 70px;
+}
+
+@media (min-width: 768px) {
+  .scrollable-content {
+    padding-top: 80px;
+  }
+}
+
+/* Megakadályozzuk, hogy a fix elemek összenyomódjanak */
+app-navbar,
+app-footer {
+  flex-shrink: 0;
+}
