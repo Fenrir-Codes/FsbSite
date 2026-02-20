@@ -9,7 +9,7 @@
       routerLinkActive="active-link"
       [routerLinkActiveOptions]="{exact: true}">Find bolig</a>
 
-    <a routerLink="/kontakt"
+    <a routerLink="/news"
       routerLinkActive="active-link">Nyheder</a>
 
     <a routerLink="/viden"
@@ -18,8 +18,11 @@
     <a routerLink="/min-bolig"
       routerLinkActive="active-link">Min bolig afdeling</a>
 
-    <a routerLink="/about"
+    <a routerLink="/contact"
       routerLinkActive="active-link">Kontakt</a>
+
+    <a routerLink="/about"
+      routerLinkActive="active-link">Om fsb</a>
 
   </div>
 
@@ -28,7 +31,9 @@
       <input type="text" placeholder="Søg..." class="search-input">
     </div>
 
-    <button class="min-side-btn desktop-only-btn">Min side</button>
+    <button class="min-side-btn desktop-only-btn" routerLink="/login"
+      routerLinkActive="active-button">Min side</button>
+
     <button class="min-side-btn desktop-menu-btn"
       (click)="toggleMenu()">Menu</button>
 
@@ -43,13 +48,16 @@
 
   <div class="side-menu-content">
     <div class="side-menu-header-links">
+      <button class="min-side-btn" routerLink="/login"
+        routerLinkActive="active-button" (click)="toggleMenu()">Min
+        side</button>
       <a routerLink="/" (click)="toggleMenu()">Find bolig</a>
       <a href="#" (click)="toggleMenu()">Min bolig afdeling</a>
-      <a href="#" (click)="toggleMenu()">Kontakt</a>
+      <a routerLink="/contact" (click)="toggleMenu()">Kontakt</a>
       <a href="#" (click)="toggleMenu()">Værd at vide</a>
+      <a routerLink="/about" (click)="toggleMenu()">Om fsb</a>
     </div>
 
-    <a routerLink="/about" (click)="toggleMenu()">Om fsb</a>
     <a href="#" (click)="toggleMenu()">Boligsøgende</a>
     <a href="#" (click)="toggleMenu()">Ledige stillinger</a>
 

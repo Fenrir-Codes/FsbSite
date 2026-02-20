@@ -1,0 +1,152 @@
+/* Teljes oldal középre igazítása */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    /* Egymás alá rakja a kártyát és az alertet */
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    gap: 20px;
+    cursor: default;
+    /* Távolság a login kártya és az alert box között */
+}
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    background: #eeeeee;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    color: #002b5c;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Szekció fejlécek */
+.section-header,
+.mitid-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.mitid-section {
+    border-top: 1px dotted #ccc;
+    cursor: pointer;
+}
+
+/* MitID */
+.mitid-icon {
+    width: 100px;
+}
+
+/* Form elemek */
+.login-form {
+    padding: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Piros keretes inputok */
+.red-border-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e20613;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.red-border-input:focus {
+    box-shadow: 0 0 5px rgba(226, 6, 19, 0.3);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+/* Piros gombok */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-red {
+    flex: 1;
+    background-color: #e20613;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.btn-red:hover {
+    background-color: #b3050f;
+}
+
+/* --- ALERT BOX STÍLUS --- */
+.info-alert-card {
+    width: 100%;
+    max-width: 450px;
+    background-color: #eeeeee;
+    /* A kártyád színéhez igazítva */
+    border-left: 5px solid #e20613;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+
+}
+
+.info-icon-circle {
+    min-width: 24px;
+    height: 24px;
+    background-color: #002b5c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.info-alert-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #002b5c;
+}
+
+.arrow-right {
+    font-style: normal;
+    font-size: 16px;
+    color: #002b5c;
+    transition: transform 0.3s ease;
+}

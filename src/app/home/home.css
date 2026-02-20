@@ -1,7 +1,5 @@
 .home-wrapper {
-  padding: 15px;
-  background-color: #f4f4f4;
-  min-height: 100vh;
+  padding: 20px;
 }
 
 /*greenish color :  */
@@ -76,6 +74,18 @@
   background-color: #e20613;
   color: white;
   border: none;
+}
+
+.btn-dark:hover {
+  transform: translateY(-2px);
+}
+
+.btn-red:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
 }
 
 .btn-dark {
