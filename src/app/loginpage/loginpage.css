@@ -97,11 +97,13 @@
     font-weight: bold;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
 }
 
 .btn-red:hover {
     background-color: #b3050f;
+    transform: translateY(-2px);
+    transition: 0.3s;
 }
 
 /* --- ALERT BOX STÍLUS --- */
