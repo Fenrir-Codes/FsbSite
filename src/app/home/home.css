@@ -104,6 +104,9 @@
   border: 1px solid white;
 }
 
+.news-section{
+  margin-top: 20px;
+}
 /* Hírek (Mobil) */
 .news-grid {
   display: grid;

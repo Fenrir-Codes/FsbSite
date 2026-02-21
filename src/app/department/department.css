@@ -1,0 +1,67 @@
+.search-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0 auto;
+    /* Kivettem a fix 15% magasságot, hogy ne vágja le a tartalmát kis kijelzőn */
+    min-height: 150px; 
+}
+
+.search-result-container {
+    padding: 20px;
+    height: auto;
+    background-color: #f4f4f4; /* Kicsit világosabb szürke, hogy olvashatóbb legyen a szöveg */
+    border-top: 1px solid #ccc;
+}
+
+.search-title {
+    color: #002b5c;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    /* Ez a rész felel a reszponzivitásért: */
+    width: 100%;       /* Mobilon kitölti a szélességet */
+    max-width: 400px;  /* Asztalin maximum 400px széles lesz */
+}
+
+.department-search-input {
+    width: 100%;
+    padding: 12px 15px 12px 45px; /* Helyet hagyunk a bal oldali ikonnak */
+    border: 2px solid #002b5c;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box; /* Biztosítja, hogy a padding ne növelje a szélességet */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.department-search-input:focus {
+    border-color: #e20613;
+    box-shadow: 0 0 8px rgba(226, 6, 19, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px; /* Kicsit kisebbre vettem az ikont, hogy jobban elférjen */
+    height: auto;
+    pointer-events: none;
+}
+
+/* --- MOBIL FINOMHANGOLÁS --- */
+@media (max-width: 480px) {
+    .search-title {
+        font-size: 20px; /* Kisebb betű mobilon, hogy ne törjön csúnyán */
+    }
+    
+    .search-page-container {
+        padding: 15px;
+    }
+}

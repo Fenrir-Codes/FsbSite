@@ -1,7 +1,8 @@
 <nav class="navbar">
-  <div class="logo-container">
-    <a routerLink="/"><img src="fsblogo.png" alt="fsb logo"
-        class="navbar-logo"></a>
+<div class="logo-container">
+    <a routerLink="/">
+      <img src="fsblogo.png" alt="fsb logo" class="navbar-logo">
+    </a>
   </div>
 
   <div class="nav-links">
@@ -15,7 +16,7 @@
     <a routerLink="/viden"
       routerLinkActive="active-link">Værd at vide</a>
 
-    <a routerLink="/min-bolig"
+    <a routerLink="/depatment"
       routerLinkActive="active-link">Min bolig afdeling</a>
 
     <a routerLink="/contact"
@@ -52,13 +53,18 @@
         routerLinkActive="active-button" (click)="toggleMenu()">Min
         side</button>
       <a routerLink="/" (click)="toggleMenu()">Find bolig</a>
-      <a href="#" (click)="toggleMenu()">Min bolig afdeling</a>
+      <a routerLink="/depatment" (click)="toggleMenu()">Min bolig afdeling</a>
       <a routerLink="/contact" (click)="toggleMenu()">Kontakt</a>
       <a href="#" (click)="toggleMenu()">Værd at vide</a>
       <a routerLink="/about" (click)="toggleMenu()">Om fsb</a>
     </div>
 
+    <a href="#" (click)="toggleMenu()">Skriv dig op</a>
     <a href="#" (click)="toggleMenu()">Boligsøgende</a>
+    <a href="#" (click)="toggleMenu()">Beboer</a>
+    <a href="#" (click)="toggleMenu()">Beboervalgt</a>
+    <a href="#" (click)="toggleMenu()">Nybyggeri og renovering</a>
+    <a href="#" (click)="toggleMenu()">Arrangementer</a>
     <a href="#" (click)="toggleMenu()">Ledige stillinger</a>
 
   </div>
