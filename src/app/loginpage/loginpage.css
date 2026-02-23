@@ -70,9 +70,7 @@
 .custom-input {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid #e20613;
     border-radius: 6px !important;
-    /* Fixen 6px minden sarok */
     font-size: 16px;
     box-sizing: border-box;
     outline: none;
@@ -82,6 +80,7 @@
 
 .custom-input:focus {
     box-shadow: 0 0 5px rgba(226, 6, 19, 0.3);
+        border: 2px solid #e20613;
 }
 
 /* Gombok */

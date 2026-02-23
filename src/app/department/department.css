@@ -1,67 +1,229 @@
+/* --- KERESŐ OLDAL KONTÉNER --- */
 .search-page-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    padding: 40px 20px;
     margin: 0 auto;
-    /* Kivettem a fix 15% magasságot, hogy ne vágja le a tartalmát kis kijelzőn */
-    min-height: 150px; 
-}
-
-.search-result-container {
-    padding: 20px;
-    height: auto;
-    background-color: #f4f4f4; /* Kicsit világosabb szürke, hogy olvashatóbb legyen a szöveg */
-    border-top: 1px solid #ccc;
+    max-width: 1200px;
+    min-height: 150px;
 }
 
 .search-title {
     color: #002b5c;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
+/* --- KERESŐ INPUT STÍLUS --- */
 .search-input-wrapper {
     position: relative;
-    /* Ez a rész felel a reszponzivitásért: */
-    width: 100%;       /* Mobilon kitölti a szélességet */
-    max-width: 400px;  /* Asztalin maximum 400px széles lesz */
+    width: 100%;
+    max-width: 450px;
 }
 
 .department-search-input {
     width: 100%;
-    padding: 12px 15px 12px 45px; /* Helyet hagyunk a bal oldali ikonnak */
+    padding: 15px 15px 15px 50px;
     border: 2px solid #002b5c;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     outline: none;
-    box-sizing: border-box; /* Biztosítja, hogy a padding ne növelje a szélességet */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: white;
 }
 
 .department-search-input:focus {
     border-color: #e20613;
-    box-shadow: 0 0 8px rgba(226, 6, 19, 0.2);
+    box-shadow: 0 4px 12px rgba(226, 6, 19, 0.15);
 }
 
 .search-icon {
     position: absolute;
-    left: 10px;
+    left: 15px;
     top: 50%;
     transform: translateY(-50%);
-    width: 25px; /* Kicsit kisebbre vettem az ikont, hogy jobban elférjen */
+    width: 22px;
     height: auto;
     pointer-events: none;
+    opacity: 0.7;
+}
+
+/* --- EREDMÉNYEK KONTÉNER ÉS RÁCS --- */
+.search-result-container {
+    padding: 40px 20px;
+    height: auto;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 380px));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+/* --- MODERN FEHÉR KÁRTYA STÍLUS --- */
+.dept-card {
+    background: #eeeeee;
+    color: #333;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #d8d8d8;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dept-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    color: #002b5c;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.card-divider {
+    border: 0;
+    border-top: 1px solid #888;
+    margin: 15px 0;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.address {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 16px;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.email-text {
+    color: #e20613;
+    font-weight: 500;
+}
+
+.icon {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+/* GOMBOK STÍLUSA */
+.btn-red-action {
+    background-color: #e20613;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-red-action:hover {
+    background-color: #b3050f;
+    transform: translateY(-2px);
+}
+
+/* Az "Akut hjælp" gomb egyedi stílusa (másodlagos gomb) */
+.dept-card button:last-of-type {
+    background-color: white;
+    border: 2px solid #e20613;
+    color: #e20613;
+}
+
+.dept-card button:last-of-type:hover {
+    background-color: #fff5f5;
+}
+
+/* INFÓ SZEKCIÓ (Nyitvatartás) */
+.info-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.value {
+    font-size: 14px;
+    color: #002b5c;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.value:last-child {
+    margin-bottom: 0;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+/* ÜRES ÁLLAPOT */
+.no-result {
+    text-align: center;
+    width: 100%;
+    padding: 60px 20px;
+    color: #888;
+    grid-column: 1 / -1;
+    font-size: 18px;
 }
 
 /* --- MOBIL FINOMHANGOLÁS --- */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .search-title {
-        font-size: 20px; /* Kisebb betű mobilon, hogy ne törjön csúnyán */
+        font-size: 22px;
     }
-    
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        /* Mobilon egy oszlop */
+        max-width: 100%;
+    }
+
     .search-page-container {
-        padding: 15px;
+        padding: 20px 15px;
+        align-items: center;
+        /* Mobilon középre igazítva jobban néz ki */
+        text-align: center;
     }
 }
