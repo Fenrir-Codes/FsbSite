@@ -6,7 +6,6 @@ import { Loginpage } from './loginpage/loginpage';
 import { Department } from './department/department';
 import { Acutehelp } from './acutehelp/acutehelp';
 import { Goodtoknow } from './goodtoknow/goodtoknow';
-import { Component } from 'lucide-react';
 
 export const routes: Routes = [
   { path: '', component: Home },            // Home page
